@@ -1,0 +1,2 @@
+declare const entriesClasses: Record<"group" | "no-entries" | "group-content-wrapper" | "group-content" | "group-button" | "entry-listing" | "entry-listing-loading" | "entry-listing-grid" | "entry-listing-grid-container" | "entry-listing-cards" | "entry-listing-cards-grid-wrapper" | "entry-listing-cards-grid" | "entry-listing-table" | "entry-listing-table-content" | "entry-listing-table-row" | "entry-listing-local-backup", string>;
+export default entriesClasses;

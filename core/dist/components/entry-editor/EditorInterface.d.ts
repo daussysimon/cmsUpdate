@@ -1,0 +1,34 @@
+import type { WorkflowStatus } from '@staticcms/core/constants/publishModes';
+import type { CollectionWithDefaults, EditorPersistOptions, Entry, Field, FieldsErrors } from '@staticcms/core';
+import type { FC } from 'react';
+import './EditorInterface.css';
+export declare const classes: Record<"content" | "i18n" | "default" | "compact" | "root" | "toolbar" | "content-wrapper" | "i18n-panel" | "i18n-active" | "split-view" | "wrapper-preview" | "wrapper-i18n-side-by-side" | "resize-handle" | "resize-handle-icon" | "mobile-root" | "workflow" | "mobile-preview" | "mobile-preview-active" | "mobile-workflow-controls", string>;
+interface EditorInterfaceProps {
+    draftKey: string;
+    entry: Entry;
+    collection: CollectionWithDefaults;
+    fields: Field[] | undefined;
+    fieldsErrors: FieldsErrors;
+    onPersist: (opts?: EditorPersistOptions) => void;
+    onDelete: () => Promise<void>;
+    onDuplicate: () => void;
+    hasChanged: boolean;
+    isNewEntry: boolean;
+    isModification: boolean;
+    toggleScroll: () => Promise<void>;
+    scrollSyncActive: boolean;
+    loadScroll: () => void;
+    submitted: boolean;
+    slug: string | undefined;
+    onDiscardDraft: () => void;
+    currentStatus: WorkflowStatus | undefined;
+    isUpdatingStatus: boolean;
+    onChangeStatus: (status: WorkflowStatus) => void;
+    hasUnpublishedChanges: boolean;
+    isPublishing: boolean;
+    onPublish: (opts?: EditorPersistOptions) => Promise<void>;
+    onUnPublish: () => Promise<void>;
+    onDeleteUnpublishedChanges: () => Promise<void>;
+}
+declare const EditorInterface: FC<EditorInterfaceProps>;
+export default EditorInterface;

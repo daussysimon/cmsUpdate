@@ -1,0 +1,11 @@
+import type { Entry, Field, RelationField, UnknownField, ValueOrNestedValue } from '@staticcms/core';
+import type { HitOption } from './types';
+export declare function parseNestedFields(hit: Entry, field: string, locale: string | undefined, searchCollectionFields: Field<UnknownField>[]): string;
+export declare function parseHitOptions(hits: Entry[], field: RelationField, locale: string | undefined, searchCollectionFields: Field<UnknownField>[]): HitOption[];
+export declare function getSelectedOptions(value: HitOption[] | undefined | null): HitOption[] | null;
+export declare function getSelectedOptions(value: string[] | undefined | null): string[] | null;
+export declare function getSelectedOptions(value: ValueOrNestedValue[] | undefined | null): ValueOrNestedValue[] | null;
+export declare function getSelectedValue(value: string, options: HitOption[], isMultiple: boolean): string | null;
+export declare function getSelectedValue(value: string[], options: HitOption[], isMultiple: boolean): string[] | null;
+export declare function getSelectedValue(value: string | string[] | null | undefined, options: HitOption[], isMultiple: boolean): string | string[] | null;
+export declare function getSelectedValue(value: ValueOrNestedValue | null | undefined, options: HitOption[], isMultiple: boolean): ValueOrNestedValue | ValueOrNestedValue[] | null;

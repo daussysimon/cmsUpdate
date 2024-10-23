@@ -1,0 +1,4 @@
+import type { BaseField, CollectionWithDefaults, ConfigWithDefaults, Entry, MediaField } from '@staticcms/core';
+export declare function selectMediaFolder<EF extends BaseField>(config: ConfigWithDefaults<EF>, collection: CollectionWithDefaults<EF> | undefined | null, entry: Entry | undefined | null, field: MediaField | undefined, currentFolder?: string): string;
+export declare function selectMediaFilePublicPath<EF extends BaseField>(config: ConfigWithDefaults<EF>, collection: CollectionWithDefaults<EF> | undefined | null, mediaPath: string, entry: Entry | undefined | null, field: MediaField | undefined, currentFolder?: string): string;
+export declare function selectMediaFilePath(config: ConfigWithDefaults, collection: CollectionWithDefaults | null | undefined, entryMap: Entry | null | undefined, mediaPath: string, field: MediaField | undefined, currentFolder?: string): string;

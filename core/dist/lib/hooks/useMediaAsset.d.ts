@@ -1,0 +1,3 @@
+import type { BaseField, CollectionWithDefaults, Entry, MediaField, ObjectValue, UnknownField } from '@staticcms/core';
+export declare function useGetMediaAsset<T extends MediaField, EF extends BaseField = UnknownField, D = ObjectValue>(collection?: CollectionWithDefaults<EF>, field?: T, entry?: Entry<D>, currentFolder?: string, isDirectory?: boolean): (url: string | undefined | null) => Promise<string | undefined | null>;
+export default function useMediaAsset<T extends MediaField, EF extends BaseField = UnknownField, D = ObjectValue>(url: string | undefined | null, collection?: CollectionWithDefaults<EF>, field?: T, entry?: Entry<D>, currentFolder?: string, isDirectory?: boolean): string;
